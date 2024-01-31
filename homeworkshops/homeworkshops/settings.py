@@ -58,7 +58,7 @@ LOGGING = {
             'handlers': ['console', 'file'],
             'level': 'INFO',
         },
-        'hwapp': {
+        'onlineshop': {
             'handlers': ['console', 'file'],
             'level': 'DEBUG',
             'propagate': True,
