@@ -1,2 +1,10 @@
-INFO 2024-01-31 17:24:30,573 autoreload 6560 12724 Watching for file changes with StatReloader
-INFO 2024-01-31 17:35:18,816 autoreload 4932 12800 Watching for file changes with StatReloader
+INFO 2024-02-04 19:10:24,668 autoreload 16484 3832 Watching for file changes with StatReloader
+INFO 2024-02-04 19:10:27,356 basehttp 16484 4268 "GET /onlineshop/products/131 HTTP/1.1" 200 753
+INFO 2024-02-04 19:11:12,024 basehttp 16484 4268 "GET /onlineshop/customers/8/7/ HTTP/1.1" 200 1297
+INFO 2024-02-04 19:14:42,644 autoreload 4156 16316 Watching for file changes with StatReloader
+INFO 2024-02-04 19:14:47,662 views 4156 8588 <WSGIRequest: GET '/onlineshop/'> request received
+INFO 2024-02-04 19:14:47,665 basehttp 4156 8588 "GET /onlineshop/ HTTP/1.1" 200 320
+INFO 2024-02-04 19:16:39,823 autoreload 4156 16316 I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\homeworkshops\onlineshop\views.py changed, reloading.
+INFO 2024-02-04 19:16:40,466 autoreload 13632 3004 Watching for file changes with StatReloader
+INFO 2024-02-04 19:16:44,214 views 13632 16304 <WSGIRequest: GET '/onlineshop/'> request received
+INFO 2024-02-04 19:16:44,220 basehttp 13632 16304 "GET /onlineshop/ HTTP/1.1" 200 298
