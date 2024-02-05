@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -7,6 +8,7 @@
             Мой проект
         {% endblock %}
     </title>
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
     {% block content %}
