@@ -1,37 +1,33 @@
 from django.db import models
 
 
-class CustomerModel(models.Model):
+class Customer(models.Model):
     name = models.CharField(max_length=100)
-    email = models.EmailField()
-    phone = models.IntegerField(blank=False)
-    address = models.TextField()
-    publication_data = models.DateTimeField(auto_now_add=True)
+    email = models.EmailField(max_length=100)
+    phone = models.CharField(max_length=20)
+    address = models.CharField(max_length=200)
+    date_registered = models.DateField(auto_now_add=True)
 
     def __str__(self):
-        return (f'Имя пользователя: {self.name} '
-                f'email: {self.email} '
-                f'номер телефона: {self.phone}')
+        return f'{self.name}: {self.email}, {self.phone}    '
 
 
-class ProductModel(models.Model):
+class Product(models.Model):
     title = models.CharField(max_length=100)
-    description = models.TextField(blank=False)
+    description = models.TextField()
     price = models.DecimalField(max_digits=10, decimal_places=2)
     amount = models.IntegerField(default=0)
-    publication_data = models.DateTimeField(auto_now_add=True)
+    date_added = models.DateField(auto_now_add=True)
 
     def __str__(self):
-        return (f'Название товара: {self.title} '
-                f'цена: {self.price} '
-                f'количество на складе: {self.amount}шт')
+        return f'{self.title}'
 
 
-class OrderModel(models.Model):
-    customer = models.ForeignKey(CustomerModel, on_delete=models.CASCADE)
-    products = models.ManyToManyField(ProductModel)
+class Order(models.Model):
+    customer = models.ForeignKey(to=Customer, on_delete=models.CASCADE)
+    products = models.ManyToManyField(Product)
     total_price = models.DecimalField(max_digits=10, decimal_places=2)
-    publication_data = models.DateTimeField(auto_now_add=True)
+    date_ordered = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f'{self.customer.name}: {list(map(str, self.products.all()))} = {self.total_price}'
+        return f'{list(map(str, self.products.all()))}'
