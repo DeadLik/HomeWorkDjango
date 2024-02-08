@@ -14,7 +14,7 @@ class Command(BaseCommand):
     def handle(self, *args, **kwargs):
         count = kwargs.get('count')
         qty_custs = count
-        qty_prods = count ** 3
+        qty_prods = count ** 2
         qty_orders = count * 2
 
         customers = []
@@ -29,7 +29,7 @@ class Command(BaseCommand):
 
         for i in range(1, qty_prods + 1):
             product = Product(title=f'title_{i}', description=f'description_{i}',
-                              price=random.randint(100, 100_000)/math.pi,
+                              price=random.randint(100, 10_000)/math.pi,
                               amount=random.randint(1, 200),
                               )
 
