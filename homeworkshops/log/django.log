@@ -169,3 +169,148 @@ INFO 2024-02-07 22:09:18,181 autoreload 16172 13460 Watching for file changes wi
 INFO 2024-02-07 22:09:20,479 basehttp 16172 2484 "GET /onlineshop/products/add HTTP/1.1" 200 1796
 INFO 2024-02-07 22:09:20,527 basehttp 16172 2484 "GET /static/css/style.css HTTP/1.1" 304 0
 INFO 2024-02-07 22:09:43,243 basehttp 16172 2484 "POST /onlineshop/products/add HTTP/1.1" 200 1832
+INFO 2024-02-08 20:49:57,274 autoreload 4948 4380 Watching for file changes with StatReloader
+WARNING 2024-02-08 20:50:02,801 log 4948 17516 Not Found: /
+WARNING 2024-02-08 20:50:02,802 basehttp 4948 17516 "GET / HTTP/1.1" 404 2430
+WARNING 2024-02-08 20:50:03,026 log 4948 17516 Not Found: /favicon.ico
+WARNING 2024-02-08 20:50:03,027 basehttp 4948 17516 "GET /favicon.ico HTTP/1.1" 404 2481
+WARNING 2024-02-08 20:50:05,751 log 4948 17516 Not Found: /
+WARNING 2024-02-08 20:50:05,752 basehttp 4948 17516 "GET / HTTP/1.1" 404 2430
+INFO 2024-02-08 20:51:10,942 views 4948 17516 <WSGIRequest: GET '/onlineshop/products/'> request received
+INFO 2024-02-08 20:51:10,983 basehttp 4948 17516 "GET /onlineshop/products/ HTTP/1.1" 200 4428
+WARNING 2024-02-08 20:51:11,029 basehttp 4948 17516 "GET /static/css/style.css HTTP/1.1" 404 1899
+ERROR 2024-02-08 20:51:13,256 log 4948 18660 Internal Server Error: /onlineshop/products/8
+Traceback (most recent call last):
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\homeworkshops\onlineshop\views.py", line 71, in product_by_id
+    return render(request, 'onlineshop/product_by_id.html', context)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\template\loaders\base.py", line 23, in get_template
+    contents = self.get_contents(origin)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\template\loaders\cached.py", line 26, in get_contents
+    return origin.loader.get_contents(origin)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\template\loaders\filesystem.py", line 23, in get_contents
+    return fp.read()
+  File "C:\Python310\lib\codecs.py", line 322, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xef in position 402: invalid continuation byte
+ERROR 2024-02-08 20:51:13,262 basehttp 4948 18660 "GET /onlineshop/products/8 HTTP/1.1" 500 131824
+ERROR 2024-02-08 20:51:29,676 log 4948 18660 Internal Server Error: /onlineshop/products/2
+Traceback (most recent call last):
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\homeworkshops\onlineshop\views.py", line 71, in product_by_id
+    return render(request, 'onlineshop/product_by_id.html', context)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\template\loaders\base.py", line 23, in get_template
+    contents = self.get_contents(origin)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\template\loaders\cached.py", line 26, in get_contents
+    return origin.loader.get_contents(origin)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\template\loaders\filesystem.py", line 23, in get_contents
+    return fp.read()
+  File "C:\Python310\lib\codecs.py", line 322, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xef in position 402: invalid continuation byte
+ERROR 2024-02-08 20:51:29,680 basehttp 4948 18660 "GET /onlineshop/products/2 HTTP/1.1" 500 131824
+ERROR 2024-02-08 20:51:31,785 log 4948 18660 Internal Server Error: /onlineshop/products/24
+Traceback (most recent call last):
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\homeworkshops\onlineshop\views.py", line 71, in product_by_id
+    return render(request, 'onlineshop/product_by_id.html', context)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\template\loaders\base.py", line 23, in get_template
+    contents = self.get_contents(origin)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\template\loaders\cached.py", line 26, in get_contents
+    return origin.loader.get_contents(origin)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\template\loaders\filesystem.py", line 23, in get_contents
+    return fp.read()
+  File "C:\Python310\lib\codecs.py", line 322, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xef in position 402: invalid continuation byte
+ERROR 2024-02-08 20:51:31,788 basehttp 4948 18660 "GET /onlineshop/products/24 HTTP/1.1" 500 131845
+INFO 2024-02-08 20:52:42,847 views 4948 18660 <WSGIRequest: GET '/onlineshop/products/'> request received
+ERROR 2024-02-08 20:52:42,894 log 4948 18660 Internal Server Error: /onlineshop/products/
+Traceback (most recent call last):
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\homeworkshops\onlineshop\views.py", line 34, in products
+    return render(request, 'onlineshop/items.html', context)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\template\loaders\base.py", line 23, in get_template
+    contents = self.get_contents(origin)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\template\loaders\cached.py", line 26, in get_contents
+    return origin.loader.get_contents(origin)
+  File "I:\Python разработка\Тех.специализация python\Фреймворк Django\HomeWorkDjango\.venv\lib\site-packages\django\template\loaders\filesystem.py", line 23, in get_contents
+    return fp.read()
+  File "C:\Python310\lib\codecs.py", line 322, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xef in position 186: invalid continuation byte
+ERROR 2024-02-08 20:52:42,899 basehttp 4948 18660 "GET /onlineshop/products/ HTTP/1.1" 500 133736
+INFO 2024-02-08 20:53:28,009 views 4948 18660 <WSGIRequest: GET '/onlineshop/products/'> request received
+INFO 2024-02-08 20:53:28,016 basehttp 4948 18660 "GET /onlineshop/products/ HTTP/1.1" 200 4428
+WARNING 2024-02-08 20:53:28,087 basehttp 4948 18660 "GET /static/css/style.css HTTP/1.1" 404 1899
+INFO 2024-02-08 20:54:52,509 basehttp 4948 12980 "GET /onlineshop/products/11 HTTP/1.1" 200 823
+WARNING 2024-02-08 20:54:52,581 basehttp 4948 12980 "GET /static/css/style.css HTTP/1.1" 404 1899
+WARNING 2024-02-08 20:55:17,842 basehttp 4948 18664 "GET /static/css/style.css HTTP/1.1" 404 1899
