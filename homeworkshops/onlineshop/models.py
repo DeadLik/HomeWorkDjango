@@ -18,7 +18,6 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
     amount = models.IntegerField(default=0)
     date_added = models.DateField(auto_now_add=True)
-    image = models.ImageField(default=None)
 
     def __str__(self):
         return f'{self.title}'
