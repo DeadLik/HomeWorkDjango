@@ -6,6 +6,7 @@
 
 {% block content %}
     <h2>{{ list }} {{ title }}</h2>
+    <img src="{{ product.image.url }}" alt="product">
     <table>
         <thead>
         <tr>
@@ -14,7 +15,6 @@
             <td>in_store</td>
             <td>description</td>
             <td>date_added</td>
-            <img src="{{ product.image.url }}" alt="photo">
         </tr>
         </thead>
 
@@ -25,7 +25,6 @@
             <td>{{ product.amount }}</td>
             <td>{{ product.description }}</td>
             <td>{{ product.date_added }}</td>
-            <img src="{{ product.image.url }}" alt="photo">
         </tr>
         </tbody>
     </table>
